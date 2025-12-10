@@ -36,9 +36,9 @@ st.title("🎓 Student Performance Predictor")
 st.write("Enter student details to see if they are likely to Pass or Fail.")
 
 # User Inputs
-hours = st.slider("Study Hours (per week)", 0, 100, 20)
-attendance = st.slider("Attendance Rate (%)", 0, 100, 80)
-past_score = st.number_input("Past Exam Score", 0, 100, 70)
+hours = st.slider("Study Hours (per week)", 10, 39, 26)
+attendance = st.slider("Attendance Rate (%)", 50, 100, 76)
+past_score = st.number_input("Past Exam Score", 50, 100, 75)
 
 # --- 4. PREDICT BUTTON ---
 if st.button("Predict Result"):
@@ -68,4 +68,5 @@ if st.button("Predict Result"):
     if (pred_svm + pred_knn + pred_ann) >= 2:
         st.success("✅ Final Verdict: PASS")
     else:
+
         st.error("❌ Final Verdict: FAIL")
