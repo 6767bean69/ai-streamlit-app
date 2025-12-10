@@ -37,7 +37,7 @@ st.write("Enter student details to see if they are likely to Pass or Fail.")
 
 # User Inputs
 hours = st.slider("Study Hours (per week)", 10, 39, 26)
-attendance = st.slider("Attendance Rate (%)", 50, 100, 76)
+attendance = st.slider("Attendance Rate (%)", 50, 99, 76)
 past_score = st.number_input("Past Exam Score", 50, 100, 75)
 
 # --- 4. PREDICT BUTTON ---
@@ -70,3 +70,4 @@ if st.button("Predict Result"):
     else:
 
         st.error("❌ Final Verdict: FAIL")
+
